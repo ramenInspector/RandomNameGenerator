@@ -30,6 +30,22 @@ var name1 = [
   "M",
   "Sand",
   "Just",
+  "Don",
+  "Ashl",
+  "Stev",
+  "Kimb",
+  "P",
+  "Em",
+  "Andr",
+  "Donn",
+  "Josh",
+  "Muh",
+  "Enz",
+  "In",
+  "Man",
+  "Hug",
+  "Fel",
+  "R",
 ];
 
 var name2 = [
@@ -61,6 +77,18 @@ var name2 = [
   "ark",
   "ra",
   "in",
+  "ald",
+  "ey",
+  "erly",
+  "aul",
+  "ily",
+  "ua",
+  "elle",
+  "ammad",
+  "o",
+  "on",
+  "ix",
+  "ick",
 ];
 
 var num = 0;
@@ -113,7 +141,7 @@ function draw() {
 
   textAlign(CENTER);
   fill(0);
-  rect(rectran, 0, random(0, 3), windowHeight);
+  rect(rectran, 0, random(0, 2), windowHeight);
   circle(random(0, windowWidth), random(0, windowHeight), random(0, 5));
 
   fill(255, 255, 255, flashAlph);
@@ -128,4 +156,14 @@ function mouseClicked() {
   flashAlph = 255;
   flash.play();
   num++;
+}
+
+function keyPressed() {
+  if (keyCode == 32) {
+    N1 = random(name1);
+    N2 = random(name2);
+    flashAlph = 255;
+    flash.play();
+    num++;
+  }
 }
